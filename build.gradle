@@ -29,10 +29,8 @@ import java.util.concurrent.TimeUnit
 buildscript {
     repositories {
         maven {
-            // GTNH RetroFuturaGradle and ASM Fork
-            name "GTNH Maven"
-            url "http://jenkins.usrv.eu:8081/nexus/content/groups/public/"
-            allowInsecureProtocol = true
+            name = "GTNH Maven"
+            url = uri("https://nexus.gtnewhorizons.com/repository/public/")
         }
         mavenLocal()
     }
@@ -578,8 +576,7 @@ repositories {
     }
     maven {
         name = "GTNH Maven"
-        url = "http://jenkins.usrv.eu:8081/nexus/content/groups/public/"
-        allowInsecureProtocol = true
+        url = uri("https://nexus.gtnewhorizons.com/repository/public/")
     }
     maven {
         name 'sonatype'
